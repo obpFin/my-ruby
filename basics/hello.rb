@@ -67,3 +67,9 @@ result = case score
 end
 puts result
 
+
+# Math Constants
+Math.constants  # => ["E", "PI"]
+Math::PI        # => 3.14159265358979
+Math::E         # => 2.71828182845905
+
