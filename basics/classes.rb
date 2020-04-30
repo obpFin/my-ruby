@@ -2,23 +2,28 @@
 class BankAccount
 
   def accountNumber
-    @accountNumber = "12345"
-end
-
-def accountName
-    @accountName = "John Smith"
-end
-
-  def initialize ()
+       @accountNumber
   end
 
-  def test_method
-       puts "The class is working"
+  def accountNumber=( value )   # setter method
+       @accountNumber = value
   end
+
+  def accountName               # getter method
+       @accountName
+  end
+
+  def accountName=( value )
+       @accountName = value
+  end
+
 end
 
 # Create an object from the class
 account = BankAccount.new()
+
+account.accountNumber = "54321"     
+account.accountName = "Fred Flintstone"
+
 puts account.accountNumber
 puts account.accountName
-outs account.test_method
