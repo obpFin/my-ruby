@@ -47,3 +47,24 @@ class KaraokeSong < Song
     @lyrics = lyrics
   end
 end
+
+# Class Variables
+
+class Song
+  @@plays = 0
+  @@maxPlays = 13                             # class variable
+  def SongList.isPlayedTooMuch(aSong)         # class method
+    return aSong.plays > maxPlays
+  end
+  def initialize(name, artist, duration)
+    @name     = name
+    @artist   = artist
+    @duration = duration
+    @plays    = 0
+  end
+  def play
+    @plays += 1
+    @@plays += 1
+    "This  song: #@plays plays. Total #@@plays plays."
+  end
+end
